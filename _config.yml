@@ -13,16 +13,6 @@ repository: "agendusyymw/LJT-Homepage"
 words_per_minute: 200
 enable_copy_code_button: true
 
-# SEO
-logo: ""
-social:
-  type: Person
-  name: Junteng Liu
-  links:
-    - "https://github.com/Vicent0205"
-    - "https://twitter.com/junteng88716710"
-    - "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ"
-
 # -----------------------------------------------------------------------------
 # Author
 # -----------------------------------------------------------------------------
@@ -42,18 +32,12 @@ author:
 # -----------------------------------------------------------------------------
 footer:
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope"
-      url: "mailto:jliugi@connect.ust.hk"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Vicent0205"
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
-      url: "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter"
-      url: "https://twitter.com/junteng88716710"
+      url: "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate"
 
 # -----------------------------------------------------------------------------
 # Reading files
@@ -172,5 +156,4 @@ tag_archive:
   type: liquid
   path: /tags/
 
-# Disable future posts
 future: false
