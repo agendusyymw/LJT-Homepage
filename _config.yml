@@ -1,61 +1,95 @@
+# -----------------------------------------------------------------------------
 # Site settings
-title: "Junteng Liu"
+# -----------------------------------------------------------------------------
+title: Junteng Liu
 title_separator: "-"
 subtitle: "PhD Candidate in NLP"
-name: "Junteng Liu"
-description: "Personal homepage of Junteng Liu, PhD candidate at HKUST NLP Group."
-url: "https://Vicent0205.github.io"
+name: Junteng Liu
+description: Personal homepage of Junteng Liu, PhD candidate at HKUST NLP Group.
+url: "https://agendusyymw.github.io"
 baseurl: "/LJT-Homepage"
 repository: "agendusyymw/LJT-Homepage"
 
+words_per_minute: 200
+enable_copy_code_button: true
+
+# SEO
+logo: ""
+social:
+  type: Person
+  name: Junteng Liu
+  links:
+    - "https://github.com/Vicent0205"
+    - "https://twitter.com/junteng88716710"
+    - "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ"
+
+# -----------------------------------------------------------------------------
+# Author
+# -----------------------------------------------------------------------------
 author:
   name: "Junteng Liu"
   avatar: "profile.png"
   bio: "First-year PhD candidate at HKUST NLP Group, advised by Prof. Junxian He. Research interests: LLM Reasoning & RL, VLM Hallucination, LLM Truthfulness & Interpretability."
   location: "Hong Kong, China"
+  employer: "Hong Kong University of Science and Technology"
   email: "jliugi@connect.ust.hk"
-  github: "Vicent0205"
+  github: Vicent0205
   google_scholar: "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate"
-  twitter: "junteng88716710"
+  twitter: junteng88716710
 
+# -----------------------------------------------------------------------------
+# Footer
+# -----------------------------------------------------------------------------
 footer:
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
+      icon: "fas fa-fw fa-envelope"
       url: "mailto:jliugi@connect.ust.hk"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Vicent0205"
     - label: "Google Scholar"
       icon: "fas fa-fw fa-graduation-cap"
-      url: "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate"
+      url: "https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ"
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+      icon: "fab fa-fw fa-twitter"
       url: "https://twitter.com/junteng88716710"
 
-site_footer:
-  links: {}
-
+# -----------------------------------------------------------------------------
 # Reading files
+# -----------------------------------------------------------------------------
 include:
   - _pages
-  - _publications
 
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - package.json
+  - package-lock.json
+  - docker-compose.yaml
+  - Dockerfile
+  - .github
+  - README.md
+  - LICENSE
+  - talkmap.ipynb
+  - talkmap.py
+  - talkmap
+  - talkmap_out.ipynb
+
+# -----------------------------------------------------------------------------
 # Collections
+# -----------------------------------------------------------------------------
 collections:
   publications:
     output: true
     permalink: /publications/:path/
 
+# -----------------------------------------------------------------------------
 # Defaults
+# -----------------------------------------------------------------------------
 defaults:
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
   # _pages
   - scope:
       path: "_pages"
@@ -63,28 +97,26 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: true
+      share: false
+      comments: false
 
-# Sass
-sass:
-  sass_dir: _sass
-  style: compressed
-
-# Outputting
+# -----------------------------------------------------------------------------
+# Markdown / Output
+# -----------------------------------------------------------------------------
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 permalink: /:categories/:title/
 
-# Plugins
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
-
-# Pagination
-paginate: 5
-paginate_path: /page:num/
-
-# Kramdown
 kramdown:
   input: GFM
   hard_wrap: false
@@ -94,3 +126,40 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# -----------------------------------------------------------------------------
+# Plugins
+# -----------------------------------------------------------------------------
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+paginate: 5
+paginate_path: /page:num/
+
+# -----------------------------------------------------------------------------
+# Theme
+# -----------------------------------------------------------------------------
+minimal_mistakes_skin: "default"
+
+# Search, analytics, comments
+search: true
+lunr:
+  search_within_pages: true
+comments:
+  provider: false
+analytics:
+  provider: false
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
