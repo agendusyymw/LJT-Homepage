@@ -77,6 +77,14 @@ exclude:
   - talkmap.py
   - talkmap
   - talkmap_out.ipynb
+  - _posts
+  - _talks
+  - _teaching
+  - _portfolio
+  - _drafts
+  - markdown_generator
+  - scripts
+  - files
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -163,3 +171,6 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+# Disable future posts
+future: false
